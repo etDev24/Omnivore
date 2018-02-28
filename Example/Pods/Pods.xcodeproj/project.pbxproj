@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		040D4B3A2046BF4A00C41BED /* Omnivore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040D4B392046BF4900C41BED /* Omnivore.swift */; };
 		040D4B592046CFA700C41BED /* ViewControllers in Resources */ = {isa = PBXBuildFile; fileRef = 040D4B582046CFA700C41BED /* ViewControllers */; };
-		040D4B5D2046CFEA00C41BED /* Interface in Resources */ = {isa = PBXBuildFile; fileRef = 040D4B5C2046CFEA00C41BED /* Interface */; };
+		040D4B5F2046D26F00C41BED /* Omnivore.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 040D4B5E2046D26F00C41BED /* Omnivore.storyboard */; };
 		13B120B890F4C532737CADBCB16B51EB /* Pods-Omnivore_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D12C5908D509333F28F4113B6EEDDBF /* Pods-Omnivore_Example-dummy.m */; };
 		1CCCE10579637B30D679ADD9E6B99413 /* Omnivore-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F4B20291861822E0CA83D336E70605A /* Omnivore-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5BA5465DB0F070FC63C93E45CFD2998C /* Pods-Omnivore_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E1C813EF06AC87354C3672EB83430B4B /* Pods-Omnivore_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -38,7 +38,7 @@
 		040D4B302046BF1C00C41BED /* Model */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Model; path = Omnivore/Classes/Model; sourceTree = "<group>"; };
 		040D4B392046BF4900C41BED /* Omnivore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Omnivore.swift; path = Omnivore/Classes/Omnivore.swift; sourceTree = "<group>"; };
 		040D4B582046CFA700C41BED /* ViewControllers */ = {isa = PBXFileReference; lastKnownFileType = folder; name = ViewControllers; path = Omnivore/Classes/ViewControllers; sourceTree = "<group>"; };
-		040D4B5C2046CFEA00C41BED /* Interface */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Interface; path = Omnivore/Assets/Interface; sourceTree = "<group>"; };
+		040D4B5E2046D26F00C41BED /* Omnivore.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Omnivore.storyboard; path = Omnivore/Assets/Omnivore.storyboard; sourceTree = "<group>"; };
 		13A014CAEA24ABB856D4C1A13813F1F5 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		13A29C275076992460C10C609BCC1395 /* Pods-Omnivore_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Omnivore_Example.modulemap"; sourceTree = "<group>"; };
 		1E6EFBD47C3CDD257E9898F57AD1EB88 /* Omnivore-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Omnivore-dummy.m"; sourceTree = "<group>"; };
@@ -151,7 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				040D4B392046BF4900C41BED /* Omnivore.swift */,
-				040D4B5C2046CFEA00C41BED /* Interface */,
+				040D4B5E2046D26F00C41BED /* Omnivore.storyboard */,
 				040D4B582046CFA700C41BED /* ViewControllers */,
 				040D4B302046BF1C00C41BED /* Model */,
 				040D4B2E2046BF1C00C41BED /* Network */,
@@ -352,8 +352,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				040D4B5D2046CFEA00C41BED /* Interface in Resources */,
 				040D4B592046CFA700C41BED /* ViewControllers in Resources */,
+				040D4B5F2046D26F00C41BED /* Omnivore.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
