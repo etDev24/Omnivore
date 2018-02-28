@@ -1,0 +1,6 @@
+framework module Pods_Omnivore_Example {
+  umbrella header "Pods-Omnivore_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

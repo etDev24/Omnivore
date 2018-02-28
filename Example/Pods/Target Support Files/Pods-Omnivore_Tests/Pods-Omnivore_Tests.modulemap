@@ -1,0 +1,6 @@
+framework module Pods_Omnivore_Tests {
+  umbrella header "Pods-Omnivore_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

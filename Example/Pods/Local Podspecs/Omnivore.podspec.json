@@ -1,0 +1,22 @@
+{
+  "name": "Omnivore",
+  "version": "0.1.0",
+  "summary": "A short description of Omnivore.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/etDev24/Omnivore",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "etDev24": "syedqamar.a1@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/etDev24/Omnivore.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "Omnivore/Classes/**/*"
+}

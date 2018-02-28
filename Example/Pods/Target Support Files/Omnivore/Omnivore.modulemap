@@ -1,0 +1,6 @@
+framework module Omnivore {
+  umbrella header "Omnivore-umbrella.h"
+
+  export *
+  module * { export * }
+}

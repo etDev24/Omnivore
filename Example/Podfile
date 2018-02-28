@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'Omnivore_Example' do
+  pod 'Omnivore', :path => '../'
+
+  target 'Omnivore_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

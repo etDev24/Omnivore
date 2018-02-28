@@ -1,0 +1,16 @@
+PODS:
+  - Omnivore (0.1.0)
+
+DEPENDENCIES:
+  - Omnivore (from `../`)
+
+EXTERNAL SOURCES:
+  Omnivore:
+    :path: ../
+
+SPEC CHECKSUMS:
+  Omnivore: 59506a0c8924c0cc89504413e0d8f8f38c175118
+
+PODFILE CHECKSUM: bf0a49cdb7ed6cf6c01a8f9155e357afbb8aed90
+
+COCOAPODS: 1.4.0
