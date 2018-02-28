@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		040D4B3A2046BF4A00C41BED /* Omnivore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040D4B392046BF4900C41BED /* Omnivore.swift */; };
+		040D4B402046BFD200C41BED /* ModifierGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040D4B3C2046BFD100C41BED /* ModifierGroupViewController.swift */; };
+		040D4B412046BFD200C41BED /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040D4B3D2046BFD100C41BED /* MenuViewController.swift */; };
+		040D4B422046BFD200C41BED /* ModifierViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040D4B3E2046BFD100C41BED /* ModifierViewController.swift */; };
+		040D4B432046BFD200C41BED /* LocationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040D4B3F2046BFD100C41BED /* LocationsViewController.swift */; };
 		13B120B890F4C532737CADBCB16B51EB /* Pods-Omnivore_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D12C5908D509333F28F4113B6EEDDBF /* Pods-Omnivore_Example-dummy.m */; };
 		1CCCE10579637B30D679ADD9E6B99413 /* Omnivore-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F4B20291861822E0CA83D336E70605A /* Omnivore-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5BA5465DB0F070FC63C93E45CFD2998C /* Pods-Omnivore_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E1C813EF06AC87354C3672EB83430B4B /* Pods-Omnivore_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -31,6 +36,14 @@
 /* Begin PBXFileReference section */
 		0154F1D5BA3AF0572DF46703B17AE801 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		02359DBA9FE8F9AFCEFCCFFBA83C1315 /* Pods-Omnivore_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Omnivore_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		040D4B2E2046BF1C00C41BED /* Network */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Network; path = Omnivore/Classes/Network; sourceTree = "<group>"; };
+		040D4B302046BF1C00C41BED /* Model */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Model; path = Omnivore/Classes/Model; sourceTree = "<group>"; };
+		040D4B392046BF4900C41BED /* Omnivore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Omnivore.swift; path = Omnivore/Classes/Omnivore.swift; sourceTree = "<group>"; };
+		040D4B3C2046BFD100C41BED /* ModifierGroupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ModifierGroupViewController.swift; path = ../Omnivore/Classes/ViewControllers/ModifierGroupViewController.swift; sourceTree = "<group>"; };
+		040D4B3D2046BFD100C41BED /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuViewController.swift; path = ../Omnivore/Classes/ViewControllers/MenuViewController.swift; sourceTree = "<group>"; };
+		040D4B3E2046BFD100C41BED /* ModifierViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ModifierViewController.swift; path = ../Omnivore/Classes/ViewControllers/ModifierViewController.swift; sourceTree = "<group>"; };
+		040D4B3F2046BFD100C41BED /* LocationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationsViewController.swift; path = ../Omnivore/Classes/ViewControllers/LocationsViewController.swift; sourceTree = "<group>"; };
+		040D4B462046C01500C41BED /* Base.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Base.lproj; path = Omnivore/Classes/Interface/Base.lproj; sourceTree = "<group>"; };
 		13A014CAEA24ABB856D4C1A13813F1F5 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		13A29C275076992460C10C609BCC1395 /* Pods-Omnivore_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Omnivore_Example.modulemap"; sourceTree = "<group>"; };
 		1E6EFBD47C3CDD257E9898F57AD1EB88 /* Omnivore-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Omnivore-dummy.m"; sourceTree = "<group>"; };
@@ -93,6 +106,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		040D4B3B2046BF4E00C41BED /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				040D4B3F2046BFD100C41BED /* LocationsViewController.swift */,
+				040D4B3D2046BFD100C41BED /* MenuViewController.swift */,
+				040D4B3C2046BFD100C41BED /* ModifierGroupViewController.swift */,
+				040D4B3E2046BFD100C41BED /* ModifierViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		557CD1008AE45E2825BE5DAABBC8EFB1 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -142,6 +166,11 @@
 		AF87A409C661BD96CB69BBC42C17AB6C /* Omnivore */ = {
 			isa = PBXGroup;
 			children = (
+				040D4B462046C01500C41BED /* Base.lproj */,
+				040D4B3B2046BF4E00C41BED /* ViewControllers */,
+				040D4B392046BF4900C41BED /* Omnivore.swift */,
+				040D4B302046BF1C00C41BED /* Model */,
+				040D4B2E2046BF1C00C41BED /* Network */,
 				F0BF391C93567E132A670509FD5D3D1C /* Pod */,
 				E8AF13A15E1FFD325CD225A6FE4D7382 /* Support Files */,
 			);
@@ -307,6 +336,11 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0930;
 				LastUpgradeCheck = 0930;
+				TargetAttributes = {
+					1079BA8E03EDF4E403E7FEB4D5068D67 = {
+						LastSwiftMigration = 0920;
+					};
+				};
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -314,6 +348,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
 			productRefGroup = BB3C55264F96675A75D3658EBDDA77D5 /* Products */;
@@ -332,7 +367,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				040D4B3A2046BF4A00C41BED /* Omnivore.swift in Sources */,
 				84C0F01DE77E37C75DFC517F6101DF75 /* Omnivore-dummy.m in Sources */,
+				040D4B422046BFD200C41BED /* ModifierViewController.swift in Sources */,
+				040D4B402046BFD200C41BED /* ModifierGroupViewController.swift in Sources */,
+				040D4B412046BFD200C41BED /* MenuViewController.swift in Sources */,
+				040D4B432046BFD200C41BED /* LocationsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -465,6 +505,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E80E35F949412488FBB6EC72E78F1DB8 /* Omnivore.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -653,6 +694,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E80E35F949412488FBB6EC72E78F1DB8 /* Omnivore.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
