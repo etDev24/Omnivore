@@ -31,9 +31,9 @@ TODO: This is just a demo description of this pod for demo purpose and will be c
   s.ios.deployment_target = '8.0'
   s.swift_version = '3.2'
   s.source_files = 'Omnivore/Classes/**/*'
-  # s.resource_bundles = {
-  #   'Omnivore' => ['Omnivore/Assets/*.png']
-  # }
+   s.resource_bundles = {
+     'Omnivore' => ['Omnivore/Assets/*']
+   }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
