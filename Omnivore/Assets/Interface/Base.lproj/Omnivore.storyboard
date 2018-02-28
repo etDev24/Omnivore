@@ -13,7 +13,7 @@
         <!--Locations View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LocationsViewController" customModule="Omnivore" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LocationsViewController" customModule="Omnivore_Demo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="m9l-So-9Pb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -98,7 +98,7 @@
         <!--Menu View Controller-->
         <scene sceneID="vbW-A8-P3D">
             <objects>
-                <viewController id="LeW-IU-Ldr" customClass="MenuViewController" customModule="Omnivore" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="LeW-IU-Ldr" customClass="MenuViewController" customModule="Omnivore_Demo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZPb-M7-ehe">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -184,7 +184,7 @@
         <!--Modifier Group View Controller-->
         <scene sceneID="Tob-Ic-PxW">
             <objects>
-                <viewController id="KLg-sP-4uF" customClass="ModifierGroupViewController" customModule="Omnivore" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="KLg-sP-4uF" customClass="ModifierGroupViewController" customModule="Omnivore_Demo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kcC-z4-bm2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -270,7 +270,7 @@
         <!--Modifier View Controller-->
         <scene sceneID="zjB-54-fZ9">
             <objects>
-                <viewController id="D0M-Np-prP" customClass="ModifierViewController" customModule="Omnivore" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="D0M-Np-prP" customClass="ModifierViewController" customModule="Omnivore_Demo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IN9-ke-Afm">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
