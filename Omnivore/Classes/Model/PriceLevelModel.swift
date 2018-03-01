@@ -13,7 +13,7 @@ class PriceLevelModel: JSONCompatible {
     var links: Links
     var name: String
     var id: String
-    var price_per_unit: Int
+    var price_per_unit: Float
 
 
     required init?(json: [String: Any]?) {
@@ -21,7 +21,7 @@ class PriceLevelModel: JSONCompatible {
         links = Links(json: json["_links"] as? [String: Any]) ?? Links()
         name = json["name"] as? String ?? ""
         id = json["id"] as? String ?? ""
-        price_per_unit = json["price_per_unit"] as? Int ?? 0
+        price_per_unit = json["price_per_unit"] as? Float ?? 0.0
     }
 
 
@@ -40,7 +40,7 @@ class PriceLevelModel: JSONCompatible {
 
 
 
-    init(links: Links, name: String, id: String, price_per_unit: Int) {
+    init(links: Links, name: String, id: String, price_per_unit: Float) {
         self.links = links
         self.name = name
         self.id = id

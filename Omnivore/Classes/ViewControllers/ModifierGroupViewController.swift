@@ -17,16 +17,36 @@ class ModifierGroupViewController: UIViewController, NVActivityIndicatorViewable
     // MARK: - IBOutlets & IBActions
     @IBOutlet weak var tblView: UITableView!
     @IBOutlet weak var textViewApiResponse: UITextView!
+    @IBOutlet weak var lblSelectedMenu: UILabel!
+    @IBOutlet weak var lblMenuTotalAmount: UILabel!
+    
+    @IBAction func next(_ sender: Any) {
+        let indexPath = self.tblView.indexPathForSelectedRow
+        if indexPath != nil {
+            let modifierGroupObj = self.modifierGroupList[(indexPath?.row)!]
+            if modifierGroupObj.embedded.modifiers.count > 0 {
+                self.performSegue(withIdentifier: "showModifierSegue", sender: indexPath?.row)
+            } else {
+                self.view.makeToast("No more Items available")
+            }
+        } else {
+            print("Indx path is nil")
+        }
+        
+    }
     
     // MARK: - Properties
+    var selectedMenu = ""
+    var totalAmount = ""
     var modifierUrl = ""
     var modifierGroupList = [ModifierGroupModel]()
-    var menu = MenuModel()
-    
     
     // MARK: - View LifeCyle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.lblMenuTotalAmount.text = totalAmount
+        self.lblSelectedMenu.text = selectedMenu
         
         self.getModifiers()
     }
@@ -48,16 +68,20 @@ class ModifierGroupViewController: UIViewController, NVActivityIndicatorViewable
         
         NetworkManager().request(requestType: .get, requestString: url, body: nil, headers: headers, encoding: URLEncoding.default) { (response, statusCode, data) in
             print(data ?? "nothing found")
-            let embedded = data!["_embedded"] as! [String:Any]
-            let modifiersGroupArr = embedded["modifier_groups"] as! [[String:Any]]
-            //let modifiers = (modifiersGroupArr.first!["_embedded"] as! [String:Any])["modifiers"] as! [[String:Any]]
-            for obj in modifiersGroupArr {
-                print(obj)
-                let modifierGroup =  ModifierGroupModel.init(json:obj)
-                self.modifierGroupList.append(modifierGroup!)
+            if data != nil {
+                let embedded = data!["_embedded"] as! [String:Any]
+                let modifiersGroupArr = embedded["modifier_groups"] as! [[String:Any]]
+                //let modifiers = (modifiersGroupArr.first!["_embedded"] as! [String:Any])["modifiers"] as! [[String:Any]]
+                for obj in modifiersGroupArr {
+                    print(obj)
+                    let modifierGroup =  ModifierGroupModel.init(json:obj)
+                    self.modifierGroupList.append(modifierGroup!)
+                }
+                
+                self.tblView.reloadData()
+            } else {
+                print("No Data found...")
             }
-            
-            self.tblView.reloadData()
             self.stopAnimating()
             
             self.showOutput(having: url, parameters: nil, response: data)
@@ -71,12 +95,38 @@ class ModifierGroupViewController: UIViewController, NVActivityIndicatorViewable
             let modifierVC = segue.destination as! ModifierViewController
             let modifierGroupObj = self.modifierGroupList[sender as! Int]
             modifierVC.modifierList = modifierGroupObj.embedded.modifiers
+            modifierVC.selectedMenu = self.lblSelectedMenu.text!
+            modifierVC.totalAmount = self.lblMenuTotalAmount.text!
         }
     }
     
     // MARK: - Custom Methods
     func showOutput(having url: String, parameters: String?, response: Any?) {
-        self.textViewApiResponse.text = "Request URL: \(url)\n\nParameters: \(String(describing: parameters))\n\nResponse: \(String(describing: response))"
+        
+        let prettyJsonData = try? JSONSerialization.data(withJSONObject: response!, options: .prettyPrinted)
+        let prettyPrintedJson = NSString(data: prettyJsonData!, encoding: String.Encoding.utf8.rawValue)!
+        
+        self.textViewApiResponse.text = "Request URL: \(url)\n\nParameters: \(String(describing: parameters))\n\nResponse: \(String(describing: prettyPrintedJson))"
+    }
+    
+    func addPriceInTotal(price: Float) {
+        let total = (Float)(self.lblMenuTotalAmount.text ?? "0")! + price
+        self.lblMenuTotalAmount.text = "\(total)"
+    }
+    
+    func subtractPriceInTotal(price : Float) {
+        let total = (Float)(self.lblMenuTotalAmount.text ?? "0")! - price
+        self.lblMenuTotalAmount.text = "\(total > 0 ? total : 0.0)"
+    }
+    
+    func addMenuItem(item: String) {
+        selectedMenu = selectedMenu.appendingFormat(" -> %@", item)
+        self.lblSelectedMenu.text = selectedMenu
+    }
+    
+    func removeMenuItem(item : String) {
+        selectedMenu = selectedMenu.replacingOccurrences(of: " -> \(item)", with: "")
+        self.lblSelectedMenu.text = selectedMenu
     }
     
 }
@@ -99,15 +149,21 @@ extension ModifierGroupViewController: UITableViewDelegate, UITableViewDataSourc
         cell.textLabel?.text = modifierGroupObj.name
         cell.detailTextLabel?.text = ""
         
+        cell.selectionStyle = .none
+        
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let modifierGroupObj = self.modifierGroupList[indexPath.row]
-        if modifierGroupObj.embedded.modifiers.count > 0 {
-            self.performSegue(withIdentifier: "showModifierSegue", sender: indexPath.row)
-        } else {
-            self.view.makeToast("No more Items available")
-        }
+        tableView.cellForRow(at: indexPath)?.accessoryType = UITableViewCellAccessoryType.checkmark
+        let modifierGroupObj = modifierGroupList[indexPath.row]
+        self.addMenuItem(item: modifierGroupObj.name)
     }
+    
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        tableView.cellForRow(at: indexPath)?.accessoryType = UITableViewCellAccessoryType.none
+        let modifierGroupObj = modifierGroupList[indexPath.row]
+        self.removeMenuItem(item: modifierGroupObj.name)
+    }
+    
 }
